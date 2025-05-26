@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Image Presentation</title>
+    <style>
+        .bordered-img {
+            border: 2px solid black;
+            width: 200px;
+            height: 200px;
+        }
+
+        .definite-size {
+            width: 480px; 
+            height: 480px;
+        }
+
+        .rounded-img {
+            border-radius: 20px;
+        }
+
+        .custom-rounded {
+            border-radius: 20px 0px 20px 0px;
+        }
+
+        .float-img {
+            float: right;
+            margin: 10px;
+        }
+
+        .hover-effect:hover {
+            opacity: 0.5;
+        }
+
+        .shadow-effect {
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <h6>All images are subject to change and are just placeholders</h2>
+    <h2>Image with 2px Border and Alternative Text</h2>
+    <img src="https://static.wikia.nocookie.net/godzilla/images/3/38/1993_godzilla.png/revision/latest?cb=20210822041511" alt="Alternative text example" class="bordered-img">
+
+    <h2>Image with Definite Size (5x5 inches)</h2>
+    <img src="https://wikizilla.org/w/images/3/30/Godzilla_Minus_One_version.png" class="definite-size">
+
+    <h2>Image with Rounded Borders</h2>
+    <img src="https://www.horrornewsnetwork.net/wp-content/uploads/2023/07/Godzilla-minus-one.jpg" class="rounded-img" width="200" height="200">
+
+    <h2>Image with Custom Rounded Borders (Top-Left & Bottom-Right)</h2>
+    <img src="https://static.wikia.nocookie.net/godzilla/images/9/9b/G2K_-_Godzilla_On_Water.jpg/revision/latest/scale-to-width-down/1200?cb=20140417115551" class="custom-rounded" width="200" height="200">
+
+    <h2>Image Linking to www.ue.edu.ph</h2>
+    <a href="https://www.ue.edu.ph" target="_blank">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQazZg-5Ac22c4RyDDs944Fmaro8jNEJyYszg&s" alt="UE Website">
+    </a>
+
+    <h2>Floating Image (Using float: right)</h2>
+    <img src="https://upload.wikimedia.org/wikipedia/en/5/57/Shin_Godzilla_-_Godzilla%27s_4th_Form.png" class="float-img" width="200" height="200">
+
+    <h2>Image with CSS Hover Effect (Opacity Change)</h2>
+    <img src="https://www.motionpictures.org/wp-content/uploads/2014/05/Godzilla-Original.jpg" class="hover-effect" width="200" height="200">
+
+    <h2>Image with CSS Box Shadow Effect (Soft Shadow)</h2>
+    <img src="https://static.wikia.nocookie.net/the-gigantis-universe/images/b/b3/Burning_Godzilla.jpg/revision/latest?cb=20190819173702" class="shadow-effect" width="200" height="200">
+
+</body>
+</html>

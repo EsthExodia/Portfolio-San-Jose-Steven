@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Developer's Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+        }
+        header {
+            background: #333;
+            color: white;
+            padding: 20px 0;
+        }
+        h1 {
+            color: white;
+        }
+        h2, h3 {
+            color: #222;
+        }
+        section {
+            background: white;
+            margin: 20px auto;
+            padding: 20px;
+            width: 80%;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .bio-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .bio-text {
+            width: 50%;
+            text-align: justify;
+            padding-right: 20px;
+            font-size: 25px;
+        }
+        .bio-image {
+            width: 50%;
+            text-align: center;
+        }
+        .bio-image img {
+            max-width: 40%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .education-hobbies-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            font-size: 20px;
+        }
+        .education, .hobbies {
+            width: 50%;
+            text-align: left;
+        }
+        .edu-hobby-images {
+            width: 100%;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .edu-hobby-images img {
+            max-width: 35%;
+            height: auto;
+            border-radius: 10px;
+            margin: 0 10px;
+        }
+        @media (max-width: 768px) {
+            .bio-container, .education-hobbies-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .bio-text, .bio-image, .education, .hobbies {
+                width: 100%;
+                text-align: center;
+                padding: 10px 0;
+            }
+            .edu-hobby-images img {
+                max-width: 30%;
+            }
+        }
+        #skills ul {
+        list-style-type: none;
+        padding: 0;
+        font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to <strong>My Developer's Page</strong></h1>
+        <p>Hello! I'm <strong>SAN JOSE, Steven Lee</strong> a <strong>passionate developer</strong> dedicated to creating <em>innovative</em> and <em>efficient</em> solutions.</p>
+    </header>
+    
+    <section id="biography">
+        <h2>Biography</h2>
+        <div class="bio-container">
+            <div class="bio-text">
+                <p>
+                    I am <strong>SAN JOSE, Steven Lee Ponce</strong>. I started pursuing and learning about computers from a very young age, from my interest and fun in playing video games. This inspired me to go into the field of technology and eventually pursue it as my passion and career. The game "Minecraft" is what really started my drive in computer programming especially, since there are features in the game that you can customize by writing in not only the game's language, but also Java itself.
+                </p>
+            </div>
+            <div class="bio-image">
+                <img src="bioimg.jpg" alt="Developer Image">
+            </div>
+        </div>
+    </section>
+    
+    <section id="education-hobbies">
+        <div class="education-hobbies-container">
+            <div class="education">
+                <h2>Education</h2>
+                <p>Primary and Secondary Education at Our Lady of Caysasay Academy</p>
+                <p>Currently taking Computer Science at University of the East</p>                
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8D4-4RemNOf2TZxigNPQF7E4YyPbxjqV0Dg&s" alt="OLCA">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCgREpGcf376_I02joMi5CgkYB9hDjg2duwg&s" alt="UE">
+            </div>
+            <div class="hobbies">
+                <h2>Hobbies & Interests</h2>
+                <p>Gaming - This is what kickstarted my love for technology and computers and I still indulge myself in my free time to play competitive online games such as "League of Legends".</p>
+                <p>Powerlifting/Lifting - As a way to better myself, I decided to start working out and fell in love with the gym most especially powerlifting. It not only helps me with my discipline in training, but also in other aspects of life.</p>
+                <div class="edu-hobby-images">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Gaming.png" alt="gaming">
+                    <img src="powerlifting.jpg" alt="powerlifting">
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li><strong>HTML5, CSS3</strong></li>
+            <li><strong>Python, Java, C++, C#</strong></li>
+            <li><strong>Problem-solving & Debugging</strong></li>
+        </ul>
+    </section>
+    
+    <aside>
+        <h3>Quick Facts</h3>
+        <p>Currently working on a <strong>story-based 2D game</strong>.</p>
+    
+    <footer>
+        <p>Contact: <a style="color: skyblue;"><strong>sanjose.stevenlee@ue.edu.ph</strong></a></p>
+        <p>&copy; 2025 <strong>My Developer Page</strong></p>
+    </footer>
+</body>
+</html>

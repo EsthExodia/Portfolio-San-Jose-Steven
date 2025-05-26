@@ -1,0 +1,223 @@
+/* Reset and base styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f7fa;
+  color: #2a2e35;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #2d3748;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+header h1 {
+  font-size: 2.5em;
+  line-height: 1.3;
+}
+
+header p {
+  margin-top: 10px;
+  font-size: 1.1em;
+  color: #cbd5e0;
+}
+
+/* Main content */
+main {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+section {
+  margin-bottom: 60px;
+}
+
+section h2 {
+  font-size: 2em;
+  line-height: 1.3;
+  color: #2b6cb0;
+  margin-bottom: 20px;
+}
+
+/* Card layout */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 132, 255, 0.1);
+  padding: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+  cursor: pointer;
+  height: 100%;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+}
+
+.card p {
+  margin-top: auto;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 16px rgba(0, 132, 255, 0.2);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.card img {
+  display: block;
+  margin: 0 auto 15px;
+  max-width: 70%;
+  height: auto;
+  flex-shrink: 0;
+  border-radius: 6px;
+}
+
+.card-content h3 {
+  margin: 0 0 8px;
+  font-size: 1.3em;
+  line-height: 1.3;
+  color: #2b6cb0;
+}
+
+.card-content p {
+  margin: 0;
+  color: #4a5568;
+  max-width: 700px;
+  font-size: 1em;
+}
+
+/* Detail section for expanded content */
+.details {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  margin-top: 15px;
+  color: #444;
+  font-size: 0.95em;
+  padding-top: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, max-height 0.4s ease;
+}
+
+.card .details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.card.expanded .details {
+  max-height: 500px; /* Adjust if needed for longer content */
+  opacity: 1;
+  margin-top: 15px;
+}
+
+
+.details ul {
+  padding-left: 20px;
+  margin-top: 8px;
+}
+
+.details li {
+  list-style: disc;
+  margin-bottom: 6px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background-color: #2d3748;
+  color: white;
+  padding: 20px;
+  margin-top: 60px;
+}
+
+footer a {
+  color: #ffd700;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #ffcc00;
+}
+
+/* Overview Section */
+#overview {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+#overview h2 {
+  font-size: 2em;
+  color: #2a2e35;
+  margin-bottom: 20px;
+}
+
+.overview-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.overview-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  flex: 1;
+  min-width: 200px;
+  padding: 20px;
+  text-decoration: none;
+  color: #2a2e35;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.overview-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 132, 255, 0.2);
+}
+
+.overview-card img {
+  width: 200px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 1024px) {
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

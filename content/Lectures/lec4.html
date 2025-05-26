@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lecture 4: Lists, Links, and Images</title>
+  <style>
+    ul.horizontal {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      gap: 1rem;
+    }
+    ul.horizontal li {
+      display: inline;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Lecture 4: Lists, Links, and Images</h1>
+
+  <!-- Ordered Lists -->
+  <section class="ordered">
+    <h2>Ordered Lists</h2>
+    <p>Ordered lists display items in a specific numbered sequence. These are typically used when the order matters, such as step-by-step instructions or ranking items.</p>
+
+    <h3>Example:</h3>
+    <ol>
+      <li>Download the installer</li>
+      <li>Open the setup file</li>
+      <li>Follow the installation wizard</li>
+      <li>Finish and launch the application</li>
+    </ol>
+
+    <p>You can also change how the numbering appears using CSS.</p>
+
+    <h3>Styled Example:</h3>
+    <ol style="list-style-type: upper-roman;">
+      <li>Prepare materials</li>
+      <li>Assemble components</li>
+      <li>Test functionality</li>
+      <li>Finalize design</li>
+      <li>Deploy product</li>
+    </ol>
+  </section>
+
+  <!-- Unordered Lists -->
+  <section>
+    <h2>Unordered Lists</h2>
+    <p>Unordered lists show items without any specific sequence. They’re useful when listing features, options, or any information where order doesn’t matter.</p>
+
+    <h3>Example:</h3>
+    <ul>
+      <li>Keyboard</li>
+      <li>Mouse</li>
+      <li>Monitor</li>
+      <li>Speaker</li>
+    </ul>
+
+    <p>Like ordered lists, the bullet styles in unordered lists can be customized using CSS.</p>
+
+    <h3>Styled Example:</h3>
+    <ul style="list-style-type: square;">
+      <li>Apples</li>
+      <li>Bananas</li>
+      <li>Cherries</li>
+      <li>Dates</li>
+    </ul>
+  </section>
+
+  <!-- Description Lists -->
+  <section>
+    <h2>Description Lists</h2>
+    <p>Description lists are used to pair terms with their definitions. They use the <code>&lt;dl&gt;</code> element, with <code>&lt;dt&gt;</code> for the term and <code>&lt;dd&gt;</code> for the description.</p>
+
+    <h3>Example:</h3>
+    <dl>
+      <dt>Laptop</dt>
+      <dd>A portable personal computer designed for mobile use.</dd>
+      <dt>SSD</dt>
+      <dd>Solid State Drive — a faster alternative to traditional hard drives.</dd>
+    </dl>
+  </section>
+
+  <!-- Nested Lists -->
+  <section>
+    <h2>Nested Lists</h2>
+    <p>Nested lists are lists within a list, often used to organize content into subcategories.</p>
+
+    <h3>Example:</h3>
+    <ul>
+      <li>Languages
+        <ul>
+          <li>Python</li>
+          <li>JavaScript</li>
+        </ul>
+      </li>
+      <li>Frameworks
+        <ul>
+          <li>React</li>
+          <li>Vue</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Horizontal Lists -->
+  <section>
+    <h2>Horizontal Lists</h2>
+    <p>With CSS, lists can be displayed in a horizontal layout, which is commonly used for navigation menus.</p>
+
+    <h3>Example:</h3>
+    <ul class="horizontal">
+      <li>Google</li>
+      <li>Facebook</li>
+      <li>Twitter</li>
+    </ul>
+  </section>
+
+  <!-- Links -->
+  <section>
+    <h2>Hyperlinks (Links)</h2>
+    <p>Links, also known as hyperlinks, allow users to navigate from one page to another. They are created using the <code>&lt;a&gt;</code> tag and can be either text or images.</p>
+
+    <h3>Types of Links:</h3>
+
+    <ul>
+      <li><strong>Absolute URL:</strong> A full URL pointing to an external site (e.g., <a href="https://www.example.com" target="_blank">Visit Example</a>).</li>
+      <li><strong>Relative URL:</strong> A local link to another page in the same site (e.g., <a href="lec3.html">Lecture 3: Tables</a>).</li>
+      <li><strong>Anchor Link:</strong> A link to a specific section on the same page (e.g., <a href="#ordered">Jump to Ordered Lists</a>).</li>
+    </ul>
+
+    <h3>Target Attributes:</h3>
+    <ul>
+      <li><code>_blank</code> — Opens the link in a new tab or window.</li>
+      <li><code>_self</code> — Opens the link in the same tab (default behavior).</li>
+      <li><code>_parent</code> — Opens the link in the parent frame (if applicable).</li>
+      <li><code>_top</code> — Opens the link in the full window, ignoring frames.</li>
+    </ul>
+
+    <h3>Example Navigation:</h3>
+    <ul class="horizontal">
+      <li><a href="https://www.google.com" target="_blank">Google</a></li>
+      <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+      <li><a href="https://www.twitter.com" target="_blank">Twitter</a></li>
+      <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+    </ul>
+  </section>
+
+  <!-- Images as Links -->
+  <section>
+    <h2>Images as Links</h2>
+    <p>You can also use images as clickable links. This is often used in buttons or image-based menus.</p>
+
+    <p><a href="https://www.google.com" target="_blank">
+      <img src="google-logo.png" alt="Google" width="100">
+    </a></p>
+  </section>
+
+  <!-- Adding Images -->
+  <section>
+    <h2>HTML Images</h2>
+    <p>Images are added using the <code>&lt;img&gt;</code> tag. You must specify at least the <code>src</code> (source) and <code>alt</code> (alternative text) attributes.</p>
+
+    <pre>
+&lt;img src="image.jpg" alt="Description" width="300" height="200"&gt;
+    </pre>
+
+    <h3>Example Image:</h3>
+    <img src="../../images/face.png" alt="Sample Placeholder" width="200">
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hotel Admin Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-datepicker@1.9.0/dist/css/bootstrap-datepicker.min.css" rel="stylesheet"/>
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .sidebar {
+      width: 250px;
+      background-color: #343a40;
+      color: white;
+      min-height: 100vh;
+    }
+    .sidebar h4 {
+      padding: 1rem;
+      text-align: center;
+      border-bottom: 1px solid #495057;
+    }
+    .sidebar a {
+      color: #adb5bd;
+      text-decoration: none;
+      display: block;
+      padding: 0.75rem 1rem;
+      cursor: pointer;
+    }
+    .sidebar a:hover,
+    .sidebar a.active {
+      background-color: #495057;
+      color: white;
+    }
+    .content {
+      flex: 1;
+      padding: 2rem;
+      background-color: #f8f9fa;
+    }
+    table tr:hover {
+      background-color: #e9ecef;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sidebar">
+    <h4>Hotel Admin</h4>
+    <a class="active" onclick="showModule('roomModule')"><i class="bi bi-house-door"></i> Room Module</a>
+    <a onclick="showModule('amenitiesModule')"><i class="bi bi-gem"></i> Amenities Module</a>
+    <a onclick="showModule('transactionModule')"><i class="bi bi-receipt"></i> Transaction Module</a>
+  </div>
+
+  <div class="content">
+    <h2>Dashboard</h2>
+
+    <!-- ROOM MODULE -->
+    <div id="roomModule">
+      <div class="mb-4">
+        <h5>Select Date</h5>
+        <input type="text" class="form-control w-25" id="calendar" placeholder="Choose a date"/>
+      </div>
+
+      <div class="card">
+        <div class="card-header">Recent Room Transactions</div>
+        <div class="card-body">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>Room #</th>
+                <th>Guest Name</th>
+                <th>Check-in</th>
+                <th>Check-out</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>169</td>
+                <td>Kal Bonito</td>
+                <td>2025-05-20</td>
+                <td>2025-05-22</td>
+                <td><span class="badge bg-success">Completed</span></td>
+              </tr>
+              <tr>
+                <td>202</td>
+                <td>Lester Moe</td>
+                <td>2025-05-21</td>
+                <td>2025-05-23</td>
+                <td><span class="badge bg-warning">Ongoing</span></td>
+              </tr>
+              <tr>
+                <td>305</td>
+                <td>John Doe</td>
+                <td>2025-05-22</td>
+                <td>2025-05-25</td>
+                <td><span class="badge bg-secondary">Upcoming</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- AMENITIES MODULE -->
+    <div id="amenitiesModule" style="display:none;">
+      <div class="card">
+        <div class="card-header">Amenities List</div>
+        <div class="card-body">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>Amenity</th>
+                <th>Status</th>
+                <th>Available From</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Spa & Wellness</td>
+                <td><span class="badge bg-success">Available</span></td>
+                <td>9:00 AM - 9:00 PM</td>
+              </tr>
+              <tr>
+                <td>Swimming Pool</td>
+                <td><span class="badge bg-success">Available</span></td>
+                <td>7:00 AM - 10:00 PM</td>
+              </tr>
+              <tr>
+                <td>Gym</td>
+                <td><span class="badge bg-danger">Maintenance</span></td>
+                <td>Closed Today</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- TRANSACTION MODULE -->
+    <div id="transactionModule" style="display:none;">
+      <div class="card">
+        <div class="card-header">Payment Transactions</div>
+        <div class="card-body">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>Transaction ID</th>
+                <th>Guest</th>
+                <th>Amount</th>
+                <th>Date</th>
+                <th>Method</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>TX1001</td>
+                <td>Kal Bonito</td>
+                <td>$320</td>
+                <td>2025-05-22</td>
+                <td>Credit Card</td>
+                <td><span class="badge bg-success">Paid</span></td>
+              </tr>
+              <tr>
+                <td>TX1002</td>
+                <td>Lester Moe</td>
+                <td>$480</td>
+                <td>2025-05-21</td>
+                <td>PayPal</td>
+                <td><span class="badge bg-success">Paid</span></td>
+              </tr>
+              <tr>
+                <td>TX1003</td>
+                <td>John Doe</td>
+                <td>$290</td>
+                <td>2025-05-20</td>
+                <td>Cash</td>
+                <td><span class="badge bg-danger">Pending</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-datepicker@1.9.0/dist/js/bootstrap-datepicker.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#calendar').datepicker({
+        format: 'yyyy-mm-dd',
+        autoclose: true,
+        todayHighlight: true
+      });
+    });
+
+    // Module Switching Logic
+    function showModule(moduleId) {
+      const modules = ['roomModule', 'amenitiesModule', 'transactionModule'];
+      modules.forEach(id => {
+        document.getElementById(id).style.display = (id === moduleId) ? 'block' : 'none';
+      });
+
+      // Highlight active menu
+      document.querySelectorAll('.sidebar a').forEach(link => link.classList.remove('active'));
+      event.target.classList.add('active');
+    }
+  </script>
+</body>
+</html>
